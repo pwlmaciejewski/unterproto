@@ -17,7 +17,7 @@ need to add an extra shim for it.
 
 ## Usage
 
-See live example: [https://raw.github.com/fragphace/unterproto/master/lib/unterproto.js](https://raw.github.com/fragphace/unterproto/master/lib/unterproto.js)
+See live example: [http://jsfiddle.net/fragphace/UCEqd/](http://jsfiddle.net/fragphace/UCEqd/).
 
 ```javascript
 (function () {
