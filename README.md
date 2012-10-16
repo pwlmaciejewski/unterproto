@@ -51,5 +51,3 @@ For browser test run buster manually or try:
 ```
 grunt buster
 ```
-
-Tested under Firefox 16, Chrome 22 and IE 9.
