@@ -1,9 +1,27 @@
 var config = module.exports;
 
+config.main = {
+  rootPath: "../"
+};
+
 config.node = {
-  env: "node",    
-  rootPath: "../",
-  tests: [
-    "test/test*.js"
-  ]
+	extends: 'main',
+  environment: "node",    
+  tests: ["test/test*.js"]
+};
+
+config.browser = {
+	extends: 'main',
+	environment: 'browser',
+	sources: ['lib/unterproto.js'],
+	tests: ['test/test*.js']
+};
+
+config.amd = {
+	extends: 'main',
+	autoRun: false,
+	deps: ['test/amd/require.js'],
+	environment: 'browser',
+	resources: ['lib/unterproto.js'],
+	tests: ['test/test*.js']
 };
