@@ -1,8 +1,8 @@
 {
   "name": "unterproto",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simplest possible prototypal inheritance sugar. For node and browser.",
-  "main": "index.js",
+  "main": "lib/unterproto",
   "scripts": {
     "test": "node_modules/buster/bin/buster-test --node"
   },
