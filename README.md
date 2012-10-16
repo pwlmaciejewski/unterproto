@@ -1,4 +1,4 @@
-unterproto
+unterproto [![Build Status](https://secure.travis-ci.org/fragphace/unterproto.png)](http://travis-ci.org/fragphace/unterproto)
 ==========
 
 Simplest possible prototypal inheritance sugar. For node.js and browser.
@@ -11,28 +11,31 @@ For node.js:
 npm install unterproto
 ```
 
-For browser you must include `lib/unterproto.js` in your page.
+For browser you must include `lib/unterproto.js` into your page.
 `Unterproto` is AMD-aware so if you are using require.js you don't
 need to add an extra shim for it.
 
 ## Usage
 
+See live example: [https://raw.github.com/fragphace/unterproto/master/lib/unterproto.js](https://raw.github.com/fragphace/unterproto/master/lib/unterproto.js)
+
 ```javascript
-var A = Proto.inherits({
-	initialize: function (foo) {
-		this.foo = foo;
-	}
-});
-
-var B = Foo.inherits({
-	getFoo: function () {
-		return this.foo;
-	}
-}
-});
-
-var b = B.instance('bar');
-console.log(b.getFoo()); // 'bar'
+(function () {
+  var A = Unterproto.inherits({
+    initialize: function (foo) {
+        this.foo = foo;
+    }
+  });
+  
+  var B = A.inherits({
+    getFoo: function () {
+        return this.foo;
+    }
+  });
+  
+  var b = B.instance('bar');
+  alert(b.getFoo()); // 'bar'
+})();
 ```
 
 ## Tests
