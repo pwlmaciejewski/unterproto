@@ -71,7 +71,7 @@
        assert.same(foo.bar, 'baz');    
      },
 
-     'return': function () {
+     'test if initialize returns something it should be ignored': function () {
        var o = { foo: 'bar' };
        var Foo = Proto.inherits({
          initialize: function () {
@@ -79,7 +79,7 @@
          }
        });
        var foo = Foo.instance();
-       assert.same(foo, o, 'If initialize() returns something it should be also returned by instance()');
+       refute.same(foo, o);
      }
   });
 })();
